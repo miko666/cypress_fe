@@ -1,0 +1,36 @@
+{
+  "name": "onb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "HTTPS_PROXY=http://172.21.254.87:3128 npx cypress open",
+    "test:headless": "HTTPS_PROXY=http://172.21.254.87:3128 npx cypress run",
+    "xray": "HTTPS_PROXY=http://172.21.254.87:3128 npx cypress run --reporter mocha-junit-reporter ./auth_and_upload.sh",
+    "steps": "HTTPS_PROXY=http://172.21.254.87:3128 npx cypress run --spec cypress/e2e/registrationValidation/*.cy.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "cypress": "^13.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.5.0",
+    "faker": "^5.5.3",
+    "iban": "^0.0.14",
+    "ibankit": "^1.6.3",
+    "pdf-parse": "^1.1.1",
+    "prettier": "^2.8.8",
+    "require": "^0.4.4"
+  },
+  "devDependencies": {
+    "@types/faker": "^6.6.9",
+    "@types/node": "^20.3.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1",
+    "cypress-xray-plugin": "^3.3.2",
+    "mocha-junit-reporter": "^2.2.0",
+    "typescript": "^5.1.3"
+  }
+}
